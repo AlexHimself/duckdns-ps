@@ -57,8 +57,6 @@ $ErrorActionPreference = "Stop"
 $taskName = "DuckDNS.org"
 #endregion
 
-# 84b56fff-4e73-4311-ace0-75dc985e825a
-
 # First check if scheduled task already exists
 if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
     # See if user wants to remove it
