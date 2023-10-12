@@ -90,5 +90,5 @@ if ($setupDuckDNSTask) {
 
     Register-ScheduledTask -TaskName $taskName -Trigger $trigger -Action $action -User "NT AUTHORITY\SYSTEM" -RunLevel Highest
 
-    Write-Host "Created scheduled task '$($taskName)' that will run every $($minuteFrequency) updating the following domain(s): $($domains)"
+    Write-Host "Created scheduled task '$($taskName)' that will run every $($minuteFrequency) minutes updating the following domain(s): $($domains)"
 }
