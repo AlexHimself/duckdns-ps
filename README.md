@@ -1,4 +1,5 @@
 
+
 # duckdns-ps
 
 DuckDNS PowerShell will create a Windows Scheduled task to automatically update DuckDNS.org and it can be installed/uninstalled with one command!
@@ -12,19 +13,32 @@ DuckDNS PowerShell will create a Windows Scheduled task to automatically update 
 * Windows Server 2016 and higher
 * Any version of windows with PowerShell 5.1 installed
 
-## Install/Update/Uninstall
-From a PowerShell prompt run the following command to start the install/update/uninstall process.
+# Install/Update/Uninstall
 
-If you already have the scheduled task created, you will be prompted to uninstall first and then you can choose to continue installing or exit.
+Choose one of the two easy methods below to start the install/update/uninstall process.
+
+If you already have the scheduled task created you will be prompted to uninstall first, and then you can choose to continue installing or exit.
+
+## Method 1 (easy)
+
+From an **ELEVATED** (_run as administrator_) PowerShell prompt run the following command:
 
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/AlexHimself/duckdns-ps/main/DuckDNS-Updater.ps1'))
 
+## Method 2 (almost as easy)
+
+Download and run `DuckDNS-Updater.ps1` manually as adminstrator.
+
+## Next Steps
 You will then be prompted to enter the following:
 
  - Domain(s) to update
  - DuckDNS token
  - Frequency in minutes to update
  - IPv4 address you would like to use, or blank to detect automatically
+
+![image](https://github.com/AlexHimself/duckdns-ps/assets/10466466/355da81a-7a6c-4f11-ad57-ad2c7c0b3bf1)
+
 
 ## Done! - Verify 
 To verify, open Windows Task Scheduler by either:
