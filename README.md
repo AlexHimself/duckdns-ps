@@ -6,6 +6,12 @@ DuckDNS PowerShell will create a Windows Scheduled task to automatically update 
 ## Requirements
 - PowerShell 5.1
 
+## Windows Versions this script is supported out of the box with
+
+* Windows 10 and higher
+* Windows Server 2016 and higher
+* Any version of windows with PowerShell 5.1 installed
+
 ## Install/Update/Uninstall
 From a PowerShell prompt run the following command to start the install/update/uninstall process.
 
