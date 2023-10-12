@@ -1,4 +1,4 @@
-﻿#Requires -Version 5.1
+#Requires -Version 5.1
 
 #region Validation Functions
 Function ValidateYesNo {
@@ -89,4 +89,6 @@ if ($setupDuckDNSTask) {
     $action = New-ScheduledTaskAction -Execute 'PowerShell.exe' -Argument $command
 
     Register-ScheduledTask -TaskName $taskName -Trigger $trigger -Action $action -User "NT AUTHORITY\SYSTEM" -RunLevel Highest
+
+    Write-Host "Created scheduled task '$($taskName)' that will run every $($minuteFrequency) updating the following domain(s): $($domains)"
 }
